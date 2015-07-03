@@ -1,12 +1,13 @@
 /**
  ***************************************************************************
- * _grid.scss
+ * Nobble > _grid.scss
  ***************************************************************************
  *
  * Add styling to the classes used for the Nobble grid.
  *
- * $. Base
- * $. Elements
+ * $. Variables
+ * $. Grid
+ * $. Item
  *
  */
 
@@ -15,21 +16,27 @@
 /* $. Base
 \*----------------------------------------------------------------*/
 
-.grid {
+.#{$nbl-container} {
+    box-sizing: border-box;
     display: block;
     padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    margin: 0 0 0 -#{$nbl-gutter};
+    direction: $nbl-direction;
+    text-align: $nbl-alignment;
 }
 
-.grid__item {
-    float: left;
+
+
+/* $. Elements
+\*----------------------------------------------------------------*/
+
+.#{$nbl-item} {
+    box-sizing: border-box;
+    display: inline-block;
     width: 50%;
+    margin: 0 -.25em 0 0;
+    padding: 0 0 0 $nbl-gutter;
+    direction: $nbl-direction;
+    text-align: $nbl-alignment;
 }
 

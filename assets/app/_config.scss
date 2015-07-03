@@ -1,6 +1,6 @@
 /**
  ***************************************************************************
- * _config.scss
+ * Nobble > _config.scss
  ***************************************************************************
  *
  * Used to setup any variables, functions or mixins that are required
@@ -13,7 +13,25 @@
 
 
 /* $. Variables
+ *
  * - All variables namespaced with $nbl to prevent conflicts
+ * - !default used to allow override capabilities
+ *
 \*----------------------------------------------------------------*/
 
-$nbl-base: 1em;
+/**
+ * Default namespace for the Grid's Container & Items respectively
+ */
+$nbl-container: "grid" !default;
+$nbl-item: "grid__item" !default;
+
+/**
+ * Default space between Grid Items
+ */
+$nbl-gutter: 2em !default;
+
+/**
+ * Default direction and text-align properties.
+ */
+$nbl-direction: inherit !default;
+$nbl-alignment: inherit !default;

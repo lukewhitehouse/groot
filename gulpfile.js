@@ -20,7 +20,7 @@
 \*----------------------------------------------------------------*/
 
 var gulp         = require('gulp'),                // https://www.npmjs.com/package/gulp
-    $            = require('gulp-load-plugins')(), // https://www.npmjs.com/package/gulp-load-$
+    $            = require('gulp-load-plugins')(), // https://www.npmjs.com/package/gulp-load-plugins
     autoprefixer = require('autoprefixer-core'),   // https://www.npmjs.com/package/gulp-autoprefixer
     del          = require('del');                 // https://www.npmjs.com/package/del
 
@@ -38,8 +38,8 @@ var assets = 'assets/';
  * Define 'app/dist' directory based on 'assets' directory
  */
 var paths = {
-    app: assets + 'app',
-    dist: assets + 'dist'
+    app: assets + 'app/',
+    dist: assets + 'dist/'
 };
 
 
@@ -133,6 +133,17 @@ gulp.task('styles', function () {
 
 
 
+/* $. Clean
+\*----------------------------------------------------------------*/
+
+gulp.task('clean', function (cb) {
+    del([
+        paths.dist + '**/*',
+    ], cb);
+});
+
+
+
 /* $. Watch
 \*----------------------------------------------------------------*/
 
@@ -154,4 +165,4 @@ gulp.task('watch', function () {
 /* $. Default
 \*----------------------------------------------------------------*/
 
-gulp.task('default', ['clean', 'styles']);
+gulp.task('default', ['styles']);

@@ -38,8 +38,8 @@ var assets = 'assets/';
  * Define 'app/dist' directory based on 'assets' directory
  */
 var paths = {
-    app: assets + 'app/scss',
-    dist: assets + 'dist/css'
+    app: assets + 'app',
+    dist: assets + 'dist'
 };
 
 

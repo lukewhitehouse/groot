@@ -5,15 +5,31 @@
  *
  * Add styling to the classes used for the Nobble grid.
  *
- * $. Container
+ * $. Base
+ * $. Elements
  *
  */
 
 
 
-/* $. Container
+/* $. Base
 \*----------------------------------------------------------------*/
 
 .grid {
+    display: block;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
+
+.grid__item {
+    float: left;
+    width: 50%;
+}
+

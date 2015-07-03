@@ -157,7 +157,7 @@ gulp.task('watch', function () {
     /**
      * Watch .scss files for changes and run 'styles' task
      */
-    gulp.watch( paths.app.scss + '**/*.scss', ['styles'] );
+    gulp.watch( paths.app + '**/*.scss', ['styles'] );
 });
 
 

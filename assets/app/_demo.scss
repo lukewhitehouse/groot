@@ -1,0 +1,55 @@
+/**
+ ***************************************************************************
+ * _demo.scss
+ ***************************************************************************
+ *
+ * Styling only used for the demo site. Do not include within production.
+ *
+ * $. Variables
+ * $. Container
+ * $. Grid Item
+ *
+ */
+
+
+
+/* $. Variables
+\*----------------------------------------------------------------*/
+
+$color-primary: #ff6347;
+
+
+
+/* $. Container
+\*----------------------------------------------------------------*/
+
+/**
+ * Demo styles
+ */
+.container {
+    margin: 0 auto;
+    width: 92.5%;
+    min-width: 15em;
+    max-width: 68.5em;
+
+    @media ( min-width: 30em ) {
+        width: 85%;
+    }
+}
+
+
+
+/* $. Grid Item
+\*----------------------------------------------------------------*/
+
+.demo-box {
+    display: block;
+    padding: 1.5em 3em;
+    font-family: 'Open Sans', Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    color: lighten($color-primary, 30%);
+    background: $color-primary;
+    border: .25em solid darken($color-primary, 5%);
+}

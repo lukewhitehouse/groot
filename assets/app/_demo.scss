@@ -30,7 +30,7 @@ $color-primary: #ff6347;
     margin: 0 auto;
     width: 92.5%;
     min-width: 15em;
-    max-width: 68.5em;
+    max-width: 77em;
 
     @media ( min-width: 30em ) {
         width: 85%;
@@ -44,10 +44,10 @@ $color-primary: #ff6347;
 
 .demo-box {
     display: block;
-    padding: 1.5em 3em;
+    margin-bottom: 1em;
+    padding: 1em;
     font-family: 'Open Sans', Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
     font-weight: 300;
-    font-size: 2rem;
     text-align: center;
     color: lighten($color-primary, 30%);
     background: $color-primary;

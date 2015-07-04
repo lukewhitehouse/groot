@@ -32,3 +32,10 @@
 \*----------------------------------------------------------------*/
 
 @import "demo";
+
+
+
+@include nobble(12);
+@include nobble(12 5, 'bp1', 30em);
+@include nobble(12 5, 'bp2', 50em);
+@include nobble(12 5, 'bp3', 70em);

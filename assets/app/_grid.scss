@@ -5,9 +5,8 @@
  *
  * Add styling to the classes used for the Nobble grid.
  *
- * $. Variables
- * $. Grid
- * $. Item
+ * $. Base
+ * $. Build
  *
  */
 
@@ -25,15 +24,10 @@
     text-align: $nbl-align-x;
 }
 
-
-
-/* $. Elements
-\*----------------------------------------------------------------*/
-
 .#{$nbl-item} {
     box-sizing: border-box;
     display: inline-block;
-    width: 50%;
+    width: 100%;
     margin: 0 -.25em 0 0;
     padding: 0 0 0 $nbl-gutter;
     direction: $nbl-direction;
@@ -41,3 +35,106 @@
     vertical-align: $nbl-align-y;
 }
 
+
+
+/* $. Build
+\*----------------------------------------------------------------*/
+
+/**
+ * The CSS declaration mixin. This takes two parameters, one for the
+ * number of columns to create and the second for at what breakpoint
+ * this should be created for.
+ *
+ * @param | int      | $cols | Number of Columns to build
+ * @param | string   | $ext  | Extension for the Class declaration
+ *
+ * @return class declartion
+ */
+@mixin nblDeclaration($cols, $ext: '')
+{
+    /**
+     * Loop through $cols
+     */
+    @each $col in $cols {
+
+        /**
+         * Create a loop ending with 1 less than the $col parameter
+         */
+        @for $i from 1 through $col {
+
+            /**
+             * Get the length of the $ext parameter
+             */
+            $extL: str-length($ext);
+
+            /**
+             * If a breakpoint has been declared, declare the class
+             * for that breakpoint.
+             */
+            @if($ext != '' and $extL >= 1 ) {
+
+                /**
+                 * Declare a class based on $col number AND breakpoint
+                 */
+                .#{$nbl-item}--#{$i}-#{$col}-#{$ext} {
+                    width: percentage($i / $col);
+                }
+            } @else {
+
+                /**
+                 * Declare a class based on $col number
+                 */
+                .#{$nbl-item}--#{$i}-#{$col} {
+                    width: percentage($i / $col);
+                }
+            }
+
+        }
+    }
+}
+
+/**
+ * The main mixin the user will interact with. This extends the
+ * `nobble-declaration` mixin by wrapping the declarations in
+ * Media Queries if needed.
+ *
+ * @param | int      | $cols | Number of Columns to build
+ * @param | string   | $ext  | Extension for the Class declaration
+ * @param | int|unit | $mq   | The value of the Media Query (i.e. 12em, 768px)
+ * @param | boolean  | $type | Orientation of the Media Query (min:false|max:true)
+ *
+ * @return class declartion
+ */
+@mixin nobble($cols, $ext: '', $mq: '', $type: false)
+{
+    /**
+     * Check if a media query has been declared
+     */
+    @if($mq != '') {
+
+        /**
+         * Check which type of Media Query should be used.
+         */
+        @if( $type == false ) {
+
+            /**
+             * Create a min-width query
+             */
+            @media screen and (min-width: $mq) {
+                @include nblDeclaration($cols, $ext);
+            }
+        }
+        @else {
+
+            /**
+             * Create a max-width query
+             */
+            @media screen and (max-width: $mq) {
+                @include nblDeclaration($cols, $ext);
+            }
+        }
+    }
+    @else {
+        @include nblDeclaration($cols, $ext);
+    }
+}

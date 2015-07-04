@@ -22,7 +22,7 @@
     padding: 0;
     margin: 0 0 0 -#{$nbl-gutter};
     direction: $nbl-direction;
-    text-align: $nbl-alignment;
+    text-align: $nbl-align-x;
 }
 
 
@@ -37,6 +37,7 @@
     margin: 0 -.25em 0 0;
     padding: 0 0 0 $nbl-gutter;
     direction: $nbl-direction;
-    text-align: $nbl-alignment;
+    text-align: $nbl-align-x;
+    vertical-align: $nbl-align-y;
 }
 

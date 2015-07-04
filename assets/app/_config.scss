@@ -31,7 +31,8 @@ $nbl-item: "grid__item" !default;
 $nbl-gutter: 2em !default;
 
 /**
- * Default direction and text-align properties.
+ * Default direction, text-align and vertical-align properties.
  */
 $nbl-direction: inherit !default;
-$nbl-alignment: inherit !default;
+$nbl-align-x: inherit !default;
+$nbl-align-y: top !default;

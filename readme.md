@@ -1,5 +1,90 @@
 # Nobble
-A grid system to end all grid systems, from the team at [Mixd](http://www.mixd.co.uk)
+A grid system to end all grid systems, from the team at [Mixd](http://www.mixd.co.uk).
+
+Nobble is based on the amazing work from Nicolas Gallagher's awesome [](Griddle).
+
+- Flexibility: Complete control to fit it into your own workflow or framework.
+- Modular: Defaults to a BEM structured Grid System
+- Configurable: Ability to change any class names, gutter sizes or alignment declarations to your hearts desire.
+- Lightweight: With its opt-in columns, you're looking at around 5kb minified and gzipped.
+
+## Installation
+
+Nobble is available through a number of package managers, including:
+
+```
+npm install --save-dev nobble
+bower install --save nobble
+gem install --save nobble
+```
+
+Alternatively, you could always download/clone this repo and use it in your own way.
+
+## Usage
+
+If you've used [](Griddle) before, you'll see that the syntax is the exact same, if not, don't fear. Nobble is pretty easy to get to grips with.
+
+Once you've imported to the Nobble system, use the `nobble` mixin provided to build out the grids you need.
+
+```
+@import "nobble";
+
+@include nobble($columns, $extension);
+```
+
+It takes two parameters:
+
+- `$columns`: A space-separated list of integers, each of which results in the build of that particular grid.
+- `$suffix`: The suffix for the class. This is optional and is intended when you're setting up Nobble instance within a Media Query.
+
+
+## Configuration
+While Nobble may have defaults for the configuration, you still have a lot of freedom in how you'd like to setup your version.
+
+Each of the following variables should be declared **above** the import of Nobble.
+
+**For example:**
+
+```
+// Alter Config here
+
+@import "Nobble";
+
+// Include mixin here
+```
+
+**Available options and defaults:**
+
+```
+// Namespace Options
+$nbl-grid: "grid";
+$nbl-item: "grid__item";
+
+// Sizing
+$nbl-gutter: 1em;
+
+// Grid alignment
+$nbl-grid-direction: inherit;
+$nbl-grid-align-x: inherit;
+
+// Item alignment
+$nbl-item-direction: inherit;
+$nbl-item-align-x: inherit;
+$nbl-item-align-y: top;
+```
+
+- `$nbl-grid`: The Grid's class namespace.
+- `$nbl-item`: Grid Item's class namespace.
+- `$nbl-gutter`: The space between each Grid Item.
+- `$nbl-grid-direction`: Controls the `direction` CSS property for the Grid.
+- `$nbl-grid-align-x`: Controls the `text-align` property for the Grid.
+- `$nbl-item-direction`: Controls the `direction` CSS property for the Grid Item.
+- `$nbl-item-align-x`: Controls the `text-align` property for the Grid Item.
+- `$nbl-item-align-y`: Controls the `vertical-align` property for the Grid Item.
+
+
+## Examples
+
 
 ## Credits
 

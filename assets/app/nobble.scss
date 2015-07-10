@@ -20,6 +20,7 @@
 // Namespacing
 $nbl-grid: "grid";
 $nbl-item: "grid__item";
+$nbl-unit: "grid__item";
 
 // Sizing
 $nbl-gutter: 1em;
@@ -27,6 +28,7 @@ $nbl-gutter: 1em;
 // Grid alignment
 $nbl-grid-direction: inherit;
 $nbl-grid-align-x: inherit;
+$nbl-grid-align-y: top;
 
 // Item alignment
 $nbl-item-direction: inherit;

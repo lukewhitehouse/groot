@@ -56,6 +56,7 @@ Each of the following variables should be declared **above** the import of Nobbl
 // Namespace Options
 $nbl-grid: "grid";             // The Grid's class namespace.
 $nbl-item: "grid__item";       // Grid Item's class namespace.
+$nbl-unit: "grid__item";       // Grid Unit's class namespace.
 
 // Sizing
 $nbl-gutter: 1em;              // The space between each Grid Item.

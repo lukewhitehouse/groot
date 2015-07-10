@@ -23,6 +23,7 @@
 // Namespacing
 $nbl-grid: "grid" !default;
 $nbl-item: "grid__item" !default;
+$nbl-unit: "grid__item" !default;
 
 // Sizing
 $nbl-gutter: 1em !default;
@@ -102,7 +103,7 @@ $nbl-item-align-y: top !default;
                 /**
                  * Declare a class based on $col number AND breakpoint
                  */
-                .#{$nbl-item}--#{$i}-#{$col}-#{$suffix} {
+                .#{$nbl-unit}--#{$i}-#{$col}-#{$suffix} {
                     width: percentage($i / $col);
                 }
             } @else {
@@ -110,7 +111,7 @@ $nbl-item-align-y: top !default;
                 /**
                  * Declare a class based on $col number
                  */
-                .#{$nbl-item}--#{$i}-#{$col} {
+                .#{$nbl-unit}--#{$i}-#{$col} {
                     width: percentage($i / $col);
                 }
             }

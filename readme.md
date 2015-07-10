@@ -1,7 +1,7 @@
 # Nobble
 A grid system to end all grid systems, from the team at [Mixd](http://www.mixd.co.uk).
 
-Nobble is based on the amazing work from Nicolas Gallagher's awesome [](Griddle).
+Nobble is based on the amazing work from Nicolas Gallagher's awesome [Griddle](https://github.com/necolas/griddle).
 
 - Flexibility: Complete control to fit it into your own workflow or framework.
 - Modular: Defaults to a BEM structured Grid System
@@ -12,7 +12,7 @@ Nobble is based on the amazing work from Nicolas Gallagher's awesome [](Griddle)
 
 Nobble is available through a number of package managers, including:
 
-```
+```sh
 npm install --save-dev nobble
 bower install --save nobble
 gem install --save nobble
@@ -22,11 +22,11 @@ Alternatively, you could always download/clone this repo and use it in your own 
 
 ## Usage
 
-If you've used [](Griddle) before, you'll see that the syntax is the exact same, if not, don't fear. Nobble is pretty easy to get to grips with.
+If you've used [Griddle](https://github.com/necolas/griddle) before, you'll see that the syntax is the exact same, if not, don't fear. Nobble is pretty easy to get to grips with.
 
 Once you've imported to the Nobble system, use the `nobble` mixin provided to build out the grids you need.
 
-```
+```scss
 @import "nobble";
 
 @include nobble($columns, $extension);
@@ -45,7 +45,7 @@ Each of the following variables should be declared **above** the import of Nobbl
 
 **For example:**
 
-```
+```scss
 // Alter Config here
 
 @import "Nobble";
@@ -55,7 +55,7 @@ Each of the following variables should be declared **above** the import of Nobbl
 
 **Available options and defaults:**
 
-```
+```scss
 // Namespace Options
 $nbl-grid: "grid";
 $nbl-item: "grid__item";

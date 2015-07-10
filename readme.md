@@ -28,7 +28,6 @@ Once you've imported to the Nobble system, use the `nobble` mixin provided to bu
 
 ```scss
 @import "nobble";
-
 @include nobble($columns, $extension);
 ```
 
@@ -47,9 +46,7 @@ Each of the following variables should be declared **above** the import of Nobbl
 
 ```scss
 // Alter Config here
-
 @import "Nobble";
-
 // Include mixin here
 ```
 

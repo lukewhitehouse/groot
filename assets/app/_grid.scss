@@ -1,9 +1,9 @@
 /**
  ***************************************************************************
- * Nobble > _grid.scss
+ * Skillet > _grid.scss
  ***************************************************************************
  *
- * Add styling to the classes used for the Nobble grid.
+ * Add styling to the classes used for the Skillet grid.
  *
  * $. Variables
  * $. Base
@@ -15,54 +15,54 @@
 
 /* $. Variables
  *
- * - All variables namespaced with $nbl to prevent conflicts
+ * - All variables namespaced with $skil to prevent conflicts
  * - !default used to allow override capabilities
  *
 \*----------------------------------------------------------------*/
 
 // Namespacing
-$nbl-grid: "grid" !default;
-$nbl-grid-reversed: "grid--reversed" !default;
-$nbl-grid-centered: "grid--centered" !default;
-$nbl-item: "grid__item" !default;
-$nbl-item-centered: "grid__item--centered" !default;
-$nbl-unit: "grid__item" !default;
+$skil-grid: "grid" !default;
+$skil-grid-reversed: "grid--reversed" !default;
+$skil-grid-centered: "grid--centered" !default;
+$skil-item: "grid__item" !default;
+$skil-item-centered: "grid__item--centered" !default;
+$skil-unit: "grid__item" !default;
 
 // Sizing
-$nbl-gutter: 1em !default;
+$skil-gutter: 1em !default;
 
 // Grid alignment
-$nbl-grid-direction: inherit !default;
-$nbl-grid-align-x: inherit !default;
+$skil-grid-direction: inherit !default;
+$skil-grid-align-x: inherit !default;
 
 // Item alignment
-$nbl-item-direction: inherit !default;
-$nbl-item-align-x: inherit !default;
-$nbl-item-align-y: top !default;
+$skil-item-direction: inherit !default;
+$skil-item-align-x: inherit !default;
+$skil-item-align-y: top !default;
 
 
 
 /* $. Base
 \*----------------------------------------------------------------*/
 
-.#{$nbl-grid} {
+.#{$skil-grid} {
     box-sizing: border-box;
     display: block;
     padding: 0;
-    margin: 0 0 0 -#{$nbl-gutter};
-    direction: $nbl-grid-direction;
-    text-align: $nbl-grid-align-x;
+    margin: 0 0 0 -#{$skil-gutter};
+    direction: $skil-grid-direction;
+    text-align: $skil-grid-align-x;
 }
 
-.#{$nbl-item} {
+.#{$skil-item} {
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
     margin: 0 -.25em 0 0;
-    padding: 0 0 0 $nbl-gutter;
-    direction: $nbl-item-direction;
-    text-align: $nbl-item-align-x;
-    vertical-align: $nbl-item-align-y;
+    padding: 0 0 0 $skil-gutter;
+    direction: $skil-item-direction;
+    text-align: $skil-item-align-x;
+    vertical-align: $skil-item-align-y;
 }
 
 
@@ -70,8 +70,8 @@ $nbl-item-align-y: top !default;
 /* $. Modifiers
 \*----------------------------------------------------------------*/
 
-.#{$nbl-grid-reversed} {
-    @if($nbl-grid-direction == 'rtl') {
+.#{$skil-grid-reversed} {
+    @if($skil-grid-direction == 'rtl') {
         direction: ltr;
     }
     @else {
@@ -84,8 +84,8 @@ $nbl-item-align-y: top !default;
         display: table;
     }
 
-    .#{$nbl-item} {
-        @if($nbl-grid-direction == 'rtl') {
+    .#{$skil-item} {
+        @if($skil-grid-direction == 'rtl') {
             margin: 0 -.25em 0 0;
         }
         @else {
@@ -94,11 +94,11 @@ $nbl-item-align-y: top !default;
     }
 }
 
-.#{$nbl-grid-centered} {
+.#{$skil-grid-centered} {
     text-align: center;
 }
 
-.#{$nbl-item-centered} {
+.#{$skil-item-centered} {
     display: block;
     margin: 0 auto;
 }
@@ -118,7 +118,7 @@ $nbl-item-align-y: top !default;
  *
  * @return class declartion
  */
-@mixin nobble($cols, $suffix: '')
+@mixin skillet($cols, $suffix: '')
 {
     /**
      * Loop through $cols
@@ -144,7 +144,7 @@ $nbl-item-align-y: top !default;
                 /**
                  * Declare a class based on $col number AND breakpoint
                  */
-                .#{$nbl-unit}--#{$i}-#{$col}-#{$suffix} {
+                .#{$skil-unit}--#{$i}-#{$col}-#{$suffix} {
                     width: percentage($i / $col);
                 }
             } @else {
@@ -152,7 +152,7 @@ $nbl-item-align-y: top !default;
                 /**
                  * Declare a class based on $col number
                  */
-                .#{$nbl-unit}--#{$i}-#{$col} {
+                .#{$skil-unit}--#{$i}-#{$col} {
                     width: percentage($i / $col);
                 }
             }

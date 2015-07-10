@@ -1,6 +1,6 @@
 /**
  ***************************************************************************
- * Nobble > nobble.scss
+ * Skillet > Skillet.scss
  ***************************************************************************
  *
  * Used to act as a master file to import all partials needed to make
@@ -18,22 +18,22 @@
 \*----------------------------------------------------------------*/
 
 // Namespacing
-$nbl-grid: "grid";
-$nbl-item: "grid__item";
-$nbl-unit: "grid__item";
+$skil-grid: "grid";
+$skil-item: "grid__item";
+$skil-unit: "grid__item";
 
 // Sizing
-$nbl-gutter: 1em;
+$skil-gutter: 1em;
 
 // Grid alignment
-$nbl-grid-direction: inherit;
-$nbl-grid-align-x: inherit;
-$nbl-grid-align-y: top;
+$skil-grid-direction: inherit;
+$skil-grid-align-x: inherit;
+$skil-grid-align-y: top;
 
 // Item alignment
-$nbl-item-direction: inherit;
-$nbl-item-align-x: inherit;
-$nbl-item-align-y: top;
+$skil-item-direction: inherit;
+$skil-item-align-x: inherit;
+$skil-item-align-y: top;
 
 /* $. Grid
 \*----------------------------------------------------------------*/
@@ -48,16 +48,16 @@ $nbl-item-align-y: top;
 @import "demo";
 
 
-@include nobble(12);
+@include skillet(12);
 
 @media (min-width: 30em) {
-    @include nobble(12 5, 'bp1');
+    @include skillet(12 5, 'bp1');
 }
 
 @media (min-width: 50em) {
-    @include nobble(12 5, 'bp2');
+    @include skillet(12 5, 'bp2');
 }
 
 @media (min-width: 70em) {
-    @include nobble(12 5, 'bp3');
+    @include skillet(12 5, 'bp3');
 }

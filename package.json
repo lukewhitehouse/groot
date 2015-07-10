@@ -1,5 +1,5 @@
 {
-  "name": "Nobble",
+  "name": "Skillet",
   "version": "0.0.1",
   "description": "A grid system to end all grid systems",
   "author": "The Mixd Team <info@mixd.co.uk>",
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mixd/nobble"
+    "url": "https://github.com/mixd/Skillet"
   },
   "bugs": {
-    "url": "https://github.com/mixd/nobble/issues"
+    "url": "https://github.com/mixd/Skillet/issues"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",

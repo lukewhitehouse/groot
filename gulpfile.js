@@ -1,6 +1,6 @@
 /**
  ***************************************************************************
- * Nobble - Gulp Setup
+ * Skillet - Gulp Setup
  ***************************************************************************
  *
  * This file sets up all the Gulp Tasks that are used for this system.

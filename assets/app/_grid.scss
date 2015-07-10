@@ -64,6 +64,35 @@ $nbl-item-align-y: top !default;
 
 
 
+/* $. Modifiers
+\*----------------------------------------------------------------*/
+
+.#{$nbl-grid}--reversed {
+    @if($nbl-grid-direction == 'rtl') {
+        direction: ltr;
+    }
+    @else {
+        direction: rtl;
+    }
+
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .#{$nbl-item} {
+        @if($nbl-grid-direction == 'rtl') {
+            margin: 0 -.25em 0 0;
+        }
+        @else {
+            margin: 0 0 0 -.25em;
+        }
+    }
+}
+
+
+
 /* $. Build
 \*----------------------------------------------------------------*/
 

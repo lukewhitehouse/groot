@@ -22,7 +22,10 @@
 
 // Namespacing
 $nbl-grid: "grid" !default;
+$nbl-grid-reversed: "grid--reversed" !default;
+$nbl-grid-centered: "grid--centered" !default;
 $nbl-item: "grid__item" !default;
+$nbl-item-centered: "grid__item--centered" !default;
 $nbl-unit: "grid__item" !default;
 
 // Sizing
@@ -67,7 +70,7 @@ $nbl-item-align-y: top !default;
 /* $. Modifiers
 \*----------------------------------------------------------------*/
 
-.#{$nbl-grid}--reversed {
+.#{$nbl-grid-reversed} {
     @if($nbl-grid-direction == 'rtl') {
         direction: ltr;
     }
@@ -89,6 +92,15 @@ $nbl-item-align-y: top !default;
             margin: 0 0 0 -.25em;
         }
     }
+}
+
+.#{$nbl-grid-centered} {
+    text-align: center;
+}
+
+.#{$nbl-item-centered} {
+    display: block;
+    margin: 0 auto;
 }
 
 

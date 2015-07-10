@@ -71,6 +71,8 @@ $nbl-item-align-x: inherit;    // Controls the *text-align* property for the Gri
 $nbl-item-align-y: top;        // Controls the *vertical-align* property for the Grid Item.
 ```
 
+## Modifiers
+
 
 ## Examples
 

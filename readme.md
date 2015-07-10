@@ -57,30 +57,21 @@ Each of the following variables should be declared **above** the import of Nobbl
 
 ```scss
 // Namespace Options
-$nbl-grid: "grid";
-$nbl-item: "grid__item";
+$nbl-grid: "grid";             // The Grid's class namespace.
+$nbl-item: "grid__item";       // Grid Item's class namespace.
 
 // Sizing
-$nbl-gutter: 1em;
+$nbl-gutter: 1em;              // The space between each Grid Item.
 
 // Grid alignment
-$nbl-grid-direction: inherit;
-$nbl-grid-align-x: inherit;
+$nbl-grid-direction: inherit;  // Controls the *direction* CSS property for the Grid.
+$nbl-grid-align-x: inherit;    // Controls the *text-align* property for the Grid.
 
 // Item alignment
-$nbl-item-direction: inherit;
-$nbl-item-align-x: inherit;
-$nbl-item-align-y: top;
+$nbl-item-direction: inherit;  // Controls the *direction* CSS property for the Grid Item.
+$nbl-item-align-x: inherit;    // Controls the *text-align* property for the Grid Item.
+$nbl-item-align-y: top;        // Controls the *vertical-align* property for the Grid Item.
 ```
-
-- `$nbl-grid`: The Grid's class namespace.
-- `$nbl-item`: Grid Item's class namespace.
-- `$nbl-gutter`: The space between each Grid Item.
-- `$nbl-grid-direction`: Controls the `direction` CSS property for the Grid.
-- `$nbl-grid-align-x`: Controls the `text-align` property for the Grid.
-- `$nbl-item-direction`: Controls the `direction` CSS property for the Grid Item.
-- `$nbl-item-align-x`: Controls the `text-align` property for the Grid Item.
-- `$nbl-item-align-y`: Controls the `vertical-align` property for the Grid Item.
 
 
 ## Examples

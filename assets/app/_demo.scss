@@ -16,7 +16,10 @@
 /* $. Variables
 \*----------------------------------------------------------------*/
 
-$color-primary: #ff6347;
+$color-orange: #ff6347;
+$color-green: #40d47e;
+$color-blue: #3498db;
+$color-purple: #9b59b6;
 
 
 
@@ -49,7 +52,25 @@ $color-primary: #ff6347;
     font-family: 'Open Sans', Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
     font-weight: 300;
     text-align: center;
-    color: lighten($color-primary, 30%);
-    background: $color-primary;
-    border: .25em solid darken($color-primary, 5%);
+    color: lighten($color-orange, 30%);
+    background: $color-orange;
+    border: .25em solid darken($color-orange, 5%);
+}
+
+.demo-box--green {
+    color: lighten($color-green, 30%);
+    background: $color-green;
+    border: .25em solid darken($color-green, 5%);
+}
+
+.demo-box--blue {
+    color: lighten($color-blue, 30%);
+    background: $color-blue;
+    border: .25em solid darken($color-blue, 5%);
+}
+
+.demo-box--purple {
+    color: lighten($color-purple, 30%);
+    background: $color-purple;
+    border: .25em solid darken($color-purple, 5%);
 }

@@ -1,7 +1,9 @@
 # Groot
 The root of all projects, from the team at [Mixd](http://www.mixd.co.uk).
 
-Groot is based on the amazing work from Nicolas Gallagher's awesome [Griddle](https://github.com/necolas/griddle).
+Groot is a class-based CSS Grid system derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). As a company, Mixd used Griddle for many years and whilst we love it, it needed fixing. We aim Groot to be that fix.
+
+Groot prides itself on the following:
 
 - Flexibility: Complete control to fit it into your own workflow or framework.
 - Modular: Defaults to a BEM structured Grid System
@@ -22,7 +24,7 @@ Alternatively, you could always download/clone this repo and use it in your own 
 
 ## Usage
 
-If you've used [Griddle](https://github.com/necolas/griddle) before, you'll see that the syntax is the exact same, if not, don't fear. Groot is pretty easy to get to grips with.
+If you've used [Griddle](https://github.com/necolas/griddle) before, you'll see that the syntax is very similar. If you've not used it before, don't fear. Groot is pretty easy to get to grips with.
 
 Once you've imported to the Groot system, use the `groot` mixin provided to build out the grids you need.
 

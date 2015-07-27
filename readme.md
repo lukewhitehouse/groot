@@ -13,9 +13,9 @@ Groot is based on the amazing work from Nicolas Gallagher's awesome [Griddle](ht
 Groot is available through a number of package managers, including:
 
 ```sh
-npm install --save-dev Groot
-bower install --save Groot
-gem install --save Groot
+npm install --save-dev groot
+bower install --save groot
+gem install --save groot
 ```
 
 Alternatively, you could always download/clone this repo and use it in your own way.
@@ -24,17 +24,17 @@ Alternatively, you could always download/clone this repo and use it in your own 
 
 If you've used [Griddle](https://github.com/necolas/griddle) before, you'll see that the syntax is the exact same, if not, don't fear. Groot is pretty easy to get to grips with.
 
-Once you've imported to the Groot system, use the `Groot` mixin provided to build out the grids you need.
+Once you've imported to the Groot system, use the `groot` mixin provided to build out the grids you need.
 
 ```scss
-@import "Groot";
-@include Groot($columns, $extension);
+@import "groot";
+@include groot($columns, $extension);
 ```
 
 It takes two parameters:
 
 - `$columns`: A space-separated list of integers, each of which results in the build of that particular grid.
-- `$suffix`: The suffix for the class. This is optional and is intended when you're setting up Groot instance within a Media Query.
+- `$suffix`: The suffix for the class. This is optional and is intended when you're setting up a Groot instance within a Media Query.
 
 
 ## Configuration
@@ -46,7 +46,7 @@ Each of the following variables should be declared **above** the import of Groot
 
 ```scss
 // Alter Config here
-@import "Groot";
+@import "groot";
 // Include mixin here
 ```
 
@@ -54,21 +54,21 @@ Each of the following variables should be declared **above** the import of Groot
 
 ```scss
 // Namespace Options
-$groot-grid: "grid";             // The Grid's class namespace.
-$groot-item: "grid__item";       // Grid Item's class namespace.
-$groot-unit: "grid__item";       // Grid Unit's class namespace.
+$gr-grid: "grid";             // The Grid's class namespace.
+$gr-item: "grid__item";       // Grid Item's class namespace.
+$gr-unit: "grid__item";       // Grid Unit's class namespace.
 
 // Sizing
-$groot-gutter: 1em;              // The space between each Grid Item.
+$gr-gutter: 1em;              // The space between each Grid Item.
 
 // Grid alignment
-$groot-grid-direction: inherit;  // Controls the *direction* CSS property for the Grid.
-$groot-grid-align-x: inherit;    // Controls the *text-align* property for the Grid.
+$gr-grid-direction: inherit;  // Controls the *direction* CSS property for the Grid.
+$gr-grid-align-x: inherit;    // Controls the *text-align* property for the Grid.
 
 // Item alignment
-$groot-item-direction: inherit;  // Controls the *direction* CSS property for the Grid Item.
-$groot-item-align-x: inherit;    // Controls the *text-align* property for the Grid Item.
-$groot-item-align-y: top;        // Controls the *vertical-align* property for the Grid Item.
+$gr-item-direction: inherit;  // Controls the *direction* CSS property for the Grid Item.
+$gr-item-align-x: inherit;    // Controls the *text-align* property for the Grid Item.
+$gr-item-align-y: top;        // Controls the *vertical-align* property for the Grid Item.
 ```
 
 ## Modifiers

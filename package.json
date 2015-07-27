@@ -1,7 +1,7 @@
 {
-  "name": "Skillet",
+  "name": "Groot",
   "version": "0.0.1",
-  "description": "A grid system to end all grid systems",
+  "description": "The root of all projects",
   "author": "The Mixd Team <info@mixd.co.uk>",
   "contributors": [
     {
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mixd/Skillet"
+    "url": "https://github.com/mixd/groot"
   },
   "bugs": {
-    "url": "https://github.com/mixd/Skillet/issues"
+    "url": "https://github.com/mixd/groot/issues"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",

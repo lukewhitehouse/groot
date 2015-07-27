@@ -1,6 +1,6 @@
 /**
  ***************************************************************************
- * Skillet - Gulp Setup
+ * Groot > gulpfile.js
  ***************************************************************************
  *
  * This file sets up all the Gulp Tasks that are used for this system.

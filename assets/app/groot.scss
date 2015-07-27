@@ -1,6 +1,6 @@
 /**
  ***************************************************************************
- * Skillet > Skillet.scss
+ * Groot > assets/app/groot.scss
  ***************************************************************************
  *
  * Used to act as a master file to import all partials needed to make
@@ -18,22 +18,22 @@
 \*----------------------------------------------------------------*/
 
 // Namespacing
-$skil-grid: "grid";
-$skil-item: "grid__item";
-$skil-unit: "grid__item";
+$gr-grid: "grid";
+$gr-item: "grid__item";
+$gr-unit: "grid__item";
 
 // Sizing
-$skil-gutter: 1em;
+$gr-gutter: 1em;
 
 // Grid alignment
-$skil-grid-direction: inherit;
-$skil-grid-align-x: inherit;
-$skil-grid-align-y: top;
+$gr-grid-direction: inherit;
+$gr-grid-align-x: inherit;
+$gr-grid-align-y: top;
 
 // Item alignment
-$skil-item-direction: inherit;
-$skil-item-align-x: inherit;
-$skil-item-align-y: top;
+$gr-item-direction: inherit;
+$gr-item-align-x: inherit;
+$gr-item-align-y: top;
 
 
 
@@ -49,16 +49,16 @@ $skil-item-align-y: top;
 
 @import "demo";
 
-@include skillet(12);
+@include groot(12);
 
 @media (min-width: 30em) {
-    @include skillet(12 5, 'bp1');
+    @include groot(12 5, 'bp1');
 }
 
 @media (min-width: 50em) {
-    @include skillet(12 5, 'bp2');
+    @include groot(12 5, 'bp2');
 }
 
 @media (min-width: 70em) {
-    @include skillet(12 5, 'bp3');
+    @include groot(12 5, 'bp3');
 }

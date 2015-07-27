@@ -1,9 +1,9 @@
 /**
  ***************************************************************************
- * Skillet > _grid.scss
+ * Groot > assets/app/_grid.scss
  ***************************************************************************
  *
- * Add styling to the classes used for the Skillet grid.
+ * Add styling to the classes used for the Groot grid.
  *
  * $. Variables
  * $. Base
@@ -15,54 +15,54 @@
 
 /* $. Variables
  *
- * - All variables namespaced with $skil to prevent conflicts
+ * - All variables namespaced with $gr to prevent conflicts
  * - !default used to allow override capabilities
  *
 \*----------------------------------------------------------------*/
 
 // Namespacing
-$skil-grid: "grid" !default;
-$skil-grid-reversed: "grid--reversed" !default;
-$skil-grid-centered: "grid--centered" !default;
-$skil-item: "grid__item" !default;
-$skil-item-centered: "grid__item--centered" !default;
-$skil-unit: "grid__item" !default;
+$gr-grid: "grid" !default;
+$gr-grid-reversed: "grid--reversed" !default;
+$gr-grid-centered: "grid--centered" !default;
+$gr-item: "grid__item" !default;
+$gr-item-centered: "grid__item--centered" !default;
+$gr-unit: "grid__item" !default;
 
 // Sizing
-$skil-gutter: 1em !default;
+$gr-gutter: 1em !default;
 
 // Grid alignment
-$skil-grid-direction: inherit !default;
-$skil-grid-align-x: inherit !default;
+$gr-grid-direction: inherit !default;
+$gr-grid-align-x: inherit !default;
 
 // Item alignment
-$skil-item-direction: inherit !default;
-$skil-item-align-x: inherit !default;
-$skil-item-align-y: top !default;
+$gr-item-direction: inherit !default;
+$gr-item-align-x: inherit !default;
+$gr-item-align-y: top !default;
 
 
 
 /* $. Base
 \*----------------------------------------------------------------*/
 
-.#{$skil-grid} {
+.#{$gr-grid} {
     box-sizing: border-box;
     display: block;
     padding: 0;
-    margin: 0 0 0 -#{$skil-gutter};
-    direction: $skil-grid-direction;
-    text-align: $skil-grid-align-x;
+    margin: 0 0 0 -#{$gr-gutter};
+    direction: $gr-grid-direction;
+    text-align: $gr-grid-align-x;
 }
 
-.#{$skil-item} {
+.#{$gr-item} {
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
     margin: 0 -.25em 0 0;
-    padding: 0 0 0 $skil-gutter;
-    direction: $skil-item-direction;
-    text-align: $skil-item-align-x;
-    vertical-align: $skil-item-align-y;
+    padding: 0 0 0 $gr-gutter;
+    direction: $gr-item-direction;
+    text-align: $gr-item-align-x;
+    vertical-align: $gr-item-align-y;
 }
 
 
@@ -70,8 +70,8 @@ $skil-item-align-y: top !default;
 /* $. Modifiers
 \*----------------------------------------------------------------*/
 
-.#{$skil-grid-reversed} {
-    @if($skil-grid-direction == 'rtl') {
+.#{$gr-grid-reversed} {
+    @if($gr-grid-direction == 'rtl') {
         direction: ltr;
     }
     @else {
@@ -84,8 +84,8 @@ $skil-item-align-y: top !default;
         display: table;
     }
 
-    .#{$skil-item} {
-        @if($skil-grid-direction == 'rtl') {
+    .#{$gr-item} {
+        @if($gr-grid-direction == 'rtl') {
             margin: 0 -.25em 0 0;
         }
         @else {
@@ -94,11 +94,11 @@ $skil-item-align-y: top !default;
     }
 }
 
-.#{$skil-grid-centered} {
+.#{$gr-grid-centered} {
     text-align: center;
 }
 
-.#{$skil-item-centered} {
+.#{$gr-item-centered} {
     display: block;
     margin: 0 auto;
 }
@@ -118,7 +118,7 @@ $skil-item-align-y: top !default;
  *
  * @return class declartion
  */
-@mixin skillet($cols, $suffix: '')
+@mixin groot($cols, $suffix: '')
 {
     /**
      * Loop through $cols
@@ -144,7 +144,7 @@ $skil-item-align-y: top !default;
                 /**
                  * Declare a class based on $col number AND breakpoint
                  */
-                .#{$skil-unit}--#{$i}-#{$col}-#{$suffix} {
+                .#{$gr-unit}--#{$i}-#{$col}-#{$suffix} {
                     width: percentage($i / $col);
                 }
             } @else {
@@ -152,7 +152,7 @@ $skil-item-align-y: top !default;
                 /**
                  * Declare a class based on $col number
                  */
-                .#{$skil-unit}--#{$i}-#{$col} {
+                .#{$gr-unit}--#{$i}-#{$col} {
                     width: percentage($i / $col);
                 }
             }

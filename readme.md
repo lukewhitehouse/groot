@@ -8,7 +8,7 @@ Groot prides itself on the following:
 - Flexibility: Complete control to fit it into your own workflow or framework.
 - Modular: Defaults to a BEM structured Grid System and keeps the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) in mind at all times.
 - Configurable: Ability to change any class names, gutter sizes or alignment declarations to your hearts desire.
-- Lightweight: With its opt-in columns, you're looking at around 5kb minified and gzipped, with only the classes you're using in your project; rather than some you'll never use.
+- Lightweight: With its opt-in columns, you're looking at around 5kb minified and gzipped
 
 ## Installation
 

@@ -1,0 +1,16 @@
+{
+  "name": "groot-sass",
+  "description": "The root of all projects",
+  "keywords": [
+    "grid",
+    "framework",
+    "starter"
+  ],
+  "authors": [
+    "Luke Whitehouse"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "package.json"
+  ]
+}

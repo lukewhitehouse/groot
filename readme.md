@@ -82,7 +82,7 @@ $gr-item-align-y: top;        // Controls the *vertical-align* property for the 
 ## Credits
 
 Groot has been produced primarily by Luke Whitehouse, however, special thanks have to be given to the following:
-- [Mixd](http://mixd.co.uk): Who introduced me to Griddle in the first place and without which I probably wouldn't be where I am today. If – like us – you work with WordPress then you may be interested in our Open Source project called [wp-deploy](https://github.com/Mixd/wp-deploy); a capistrano-powered deployment tool for WordPress.
+- [Mixd](http://mixd.co.uk): Who introduced me to Griddle in the first place. If – like us – you work with WordPress then you may be interested in our Open Source project called [wp-deploy](https://github.com/Mixd/wp-deploy); a capistrano-powered deployment tool for WordPress.
 
 ## License
 

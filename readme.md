@@ -1,7 +1,7 @@
 # Groot
-The root of all projects, from the team at [Mixd](http://www.mixd.co.uk).
+The root of all projects.
 
-Groot is a class-based CSS Grid system derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). As a company, Mixd used Griddle for many years and whilst we love it, it needed fixing. We aim Groot to be that fix.
+Groot is a class-based CSS Grid system derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). I've been using Griddle for many years professionally now and whilst I love the overall package, its not perfect and could do with a upgrade. I've started Groot with the intention of being that.
 
 Groot prides itself on the following:
 
@@ -81,6 +81,17 @@ $gr-item-align-y: top;        // Controls the *vertical-align* property for the 
 
 ## Credits
 
-This framework is under constant development by the [Mixd](http://mixd.co.uk) team. Like it? Hate it? Let us know on [Twitter](http://twitter.com/mixd).
+Groot has been produced primarily by Luke Whitehouse, however, special thanks have to be given to the following:
+- [Mixd](http://mixd.co.uk): Who introduced me to Griddle in the first place and without which I probably wouldn't be where I am today. If – like us – you work with WordPress then you may be interested in our Open Source project called [wp-deploy](https://github.com/Mixd/wp-deploy); a capistrano-powered deployment tool for WordPress.
 
-If – like us – you work with WordPress then you may be interested in our other Open Source project called [wp-deploy](https://github.com/Mixd/wp-deploy) a capistrano-powered deployment tool for WordPress.
+## License
+
+MIT License (MIT)
+
+Copyright (c) 2015 Luke Whitehouse, https://github.com/lukewhitehouse/groot
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

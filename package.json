@@ -2,23 +2,19 @@
   "name": "Groot",
   "version": "0.0.1",
   "description": "The root of all projects",
-  "author": "The Mixd Team <info@mixd.co.uk>",
+  "author": "Luke Whitehouse <luke@lukewhitehouse.co.uk>",
   "contributors": [
     {
       "name": "Luke Whitehouse",
-      "email": "l.whitehouse@mixd.co.uk"
-    },
-    {
-      "name": "Aaron Thomas",
-      "email": "a.thomas@mixd.co.uk"
+      "email": "luke@lukewhitehouse.co.uk"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mixd/groot"
+    "url": "https://github.com/lukewhitehouse/groot"
   },
   "bugs": {
-    "url": "https://github.com/mixd/groot/issues"
+    "url": "https://github.com/lukewhitehouse/groot/issues"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",

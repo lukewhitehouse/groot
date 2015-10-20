@@ -6,7 +6,13 @@
     "framework",
     "starter"
   ],
-  "main": "_groot.scss",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": "assets/app/scss/_groot.scss",
   "authors": [
     "Luke Whitehouse"
   ],

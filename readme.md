@@ -17,7 +17,6 @@ Groot is available through a number of package managers, including:
 ```sh
 npm install --save-dev groot
 bower install --save groot
-gem install --save groot
 ```
 
 Alternatively, you could always download/clone this repo and use it in your own way.
@@ -55,22 +54,61 @@ Each of the following variables should be declared **above** the import of Groot
 **Available options and defaults:**
 
 ```scss
-// Namespace Options
-$gr-grid: "grid";             // The Grid's class namespace.
-$gr-item: "grid__item";       // Grid Item's class namespace.
-$gr-unit: "grid__item";       // Grid Unit's class namespace.
+/**
+ * Namespacing
+ */
 
-// Sizing
-$gr-gutter: 1em;              // The space between each Grid Item.
+// 1. Main grid container which holds all elements
+$gr-grid: "grid" !default;
 
-// Grid alignment
-$gr-grid-direction: inherit;  // Controls the *direction* CSS property for the Grid.
-$gr-grid-align-x: inherit;    // Controls the *text-align* property for the Grid.
+// 2. Individual grid item/cell/unit/whatever you want to call it.
+$gr-item: "grid__item" !default;
 
-// Item alignment
-$gr-item-direction: inherit;  // Controls the *direction* CSS property for the Grid Item.
-$gr-item-align-x: inherit;    // Controls the *text-align* property for the Grid Item.
-$gr-item-align-y: top;        // Controls the *vertical-align* property for the Grid Item.
+// 3. The class chained onto the same element as above which controls the sizing.
+$gr-item-unit: "grid__item" !default;
+
+/**
+ * Sizing
+ */
+
+// 1. The size between each grid item. Can use any CSS unit of measurement.
+$gr-gutter: 1em !default;
+
+/**
+ * Modifiers
+ */
+
+// 1. Class which controls the reversed direction of the grid. i.e. direction: rtl;
+$gr-grid-reversed: "grid--reversed" !default;
+
+// 2. Centers the entire Grid, which grid items will inherit.
+$gr-grid-centered: "grid--centered" !default;
+
+// 3. Center an individual item, rather than all items.
+$gr-item-centered: "grid__item--centered" !default;
+
+/**
+ * Grid alignment
+ */
+
+// 1. Initial direction of the $gr-grid
+$gr-grid-direction: inherit !default;
+
+// 2. Initial horizontal alignment of the $gr-grid.
+$gr-grid-align-x: inherit !default;
+
+/**
+ * Item alignment
+ */
+
+// 1. Initial direction of the $gr-item
+$gr-item-direction: inherit !default;
+
+// 2. Initial horizontal alignment of the $gr-item
+$gr-item-align-x: inherit !default;
+
+// 3. Initial vertical alignment of the $gr-item
+$gr-item-align-y: top !default;
 ```
 
 ## Modifiers

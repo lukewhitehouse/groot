@@ -60,7 +60,6 @@ Each of the following variables should be declared **above** the import of Groot
 /**
  * Namespacing
  */
-
 $gr-grid: "grid" !default;                          // Main grid container which holds all elements
 $gr-item: "grid__item" !default;                    // Individual grid item/cell/unit/whatever you want to call it.
 $gr-item-unit: "grid__item" !default;               // The class chained onto the same element as above which controls the sizing.
@@ -68,13 +67,11 @@ $gr-item-unit: "grid__item" !default;               // The class chained onto th
 /**
  * Sizing
  */
-
 $gr-gutter: 1em !default;                           // The size between each grid item. Can use any CSS unit of measurement.
 
 /**
  * Modifiers
  */
-
 $gr-grid-reversed: "grid--reversed" !default;       // Class which controls the reversed direction of the grid. i.e. direction: rtl;
 $gr-grid-centered: "grid--centered" !default;       // Centers the entire Grid, which grid items will inherit.
 $gr-item-centered: "grid__item--centered" !default; // Center an individual item, rather than all items.
@@ -89,7 +86,6 @@ $gr-grid-align-x: inherit !default;                 // Initial horizontal alignm
 /**
  * Item alignment
  */
-
 $gr-item-direction: inherit !default;               // Initial direction of the $gr-item
 $gr-item-align-x: inherit !default;                 // Initial horizontal alignment of the $gr-item
 $gr-item-align-y: top !default;                     // Initial vertical alignment of the $gr-item

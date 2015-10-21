@@ -46,8 +46,11 @@ Each of the following variables should be declared **above** the import of Groot
 **For example:**
 
 ```scss
-// Alter Config here
+
+// Override default config here
+
 @import "groot";
+
 // Include mixin here
 ```
 
@@ -58,57 +61,38 @@ Each of the following variables should be declared **above** the import of Groot
  * Namespacing
  */
 
-// 1. Main grid container which holds all elements
-$gr-grid: "grid" !default;
-
-// 2. Individual grid item/cell/unit/whatever you want to call it.
-$gr-item: "grid__item" !default;
-
-// 3. The class chained onto the same element as above which controls the sizing.
-$gr-item-unit: "grid__item" !default;
+$gr-grid: "grid" !default;            // Main grid container which holds all elements
+$gr-item: "grid__item" !default;      // Individual grid item/cell/unit/whatever you want to call it.
+$gr-item-unit: "grid__item" !default; // The class chained onto the same element as above which controls the sizing.
 
 /**
  * Sizing
  */
 
-// 1. The size between each grid item. Can use any CSS unit of measurement.
-$gr-gutter: 1em !default;
+$gr-gutter: 1em !default; // The size between each grid item. Can use any CSS unit of measurement.
 
 /**
  * Modifiers
  */
 
-// 1. Class which controls the reversed direction of the grid. i.e. direction: rtl;
-$gr-grid-reversed: "grid--reversed" !default;
-
-// 2. Centers the entire Grid, which grid items will inherit.
-$gr-grid-centered: "grid--centered" !default;
-
-// 3. Center an individual item, rather than all items.
-$gr-item-centered: "grid__item--centered" !default;
+$gr-grid-reversed: "grid--reversed" !default;       // Class which controls the reversed direction of the grid. i.e. direction: rtl;
+$gr-grid-centered: "grid--centered" !default;       // Centers the entire Grid, which grid items will inherit.
+$gr-item-centered: "grid__item--centered" !default; // Center an individual item, rather than all items.
 
 /**
  * Grid alignment
  */
+$gr-grid-direction: inherit !default; // Initial direction of the $gr-grid
 
-// 1. Initial direction of the $gr-grid
-$gr-grid-direction: inherit !default;
-
-// 2. Initial horizontal alignment of the $gr-grid.
-$gr-grid-align-x: inherit !default;
+$gr-grid-align-x: inherit !default;   // Initial horizontal alignment of the $gr-grid.
 
 /**
  * Item alignment
  */
 
-// 1. Initial direction of the $gr-item
-$gr-item-direction: inherit !default;
-
-// 2. Initial horizontal alignment of the $gr-item
-$gr-item-align-x: inherit !default;
-
-// 3. Initial vertical alignment of the $gr-item
-$gr-item-align-y: top !default;
+$gr-item-direction: inherit !default; // Initial direction of the $gr-item
+$gr-item-align-x: inherit !default;   // Initial horizontal alignment of the $gr-item
+$gr-item-align-y: top !default;       // Initial vertical alignment of the $gr-item
 ```
 
 ## Modifiers

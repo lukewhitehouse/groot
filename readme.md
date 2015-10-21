@@ -61,15 +61,15 @@ Each of the following variables should be declared **above** the import of Groot
  * Namespacing
  */
 
-$gr-grid: "grid" !default;            // Main grid container which holds all elements
-$gr-item: "grid__item" !default;      // Individual grid item/cell/unit/whatever you want to call it.
-$gr-item-unit: "grid__item" !default; // The class chained onto the same element as above which controls the sizing.
+$gr-grid: "grid" !default;                          // Main grid container which holds all elements
+$gr-item: "grid__item" !default;                    // Individual grid item/cell/unit/whatever you want to call it.
+$gr-item-unit: "grid__item" !default;               // The class chained onto the same element as above which controls the sizing.
 
 /**
  * Sizing
  */
 
-$gr-gutter: 1em !default; // The size between each grid item. Can use any CSS unit of measurement.
+$gr-gutter: 1em !default;                           // The size between each grid item. Can use any CSS unit of measurement.
 
 /**
  * Modifiers
@@ -82,17 +82,17 @@ $gr-item-centered: "grid__item--centered" !default; // Center an individual item
 /**
  * Grid alignment
  */
-$gr-grid-direction: inherit !default; // Initial direction of the $gr-grid
+$gr-grid-direction: inherit !default;               // Initial direction of the $gr-grid
 
-$gr-grid-align-x: inherit !default;   // Initial horizontal alignment of the $gr-grid.
+$gr-grid-align-x: inherit !default;                 // Initial horizontal alignment of the $gr-grid.
 
 /**
  * Item alignment
  */
 
-$gr-item-direction: inherit !default; // Initial direction of the $gr-item
-$gr-item-align-x: inherit !default;   // Initial horizontal alignment of the $gr-item
-$gr-item-align-y: top !default;       // Initial vertical alignment of the $gr-item
+$gr-item-direction: inherit !default;               // Initial direction of the $gr-item
+$gr-item-align-x: inherit !default;                 // Initial horizontal alignment of the $gr-item
+$gr-item-align-y: top !default;                     // Initial vertical alignment of the $gr-item
 ```
 
 ## Modifiers

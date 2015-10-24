@@ -65,7 +65,7 @@ $gr-item: "grid__item" !default;                     // Individual grid item/cel
 $gr-item-unit: "grid__item" !default;                // The class chained onto the same element as above which controls the sizing.
 
 // Modifiers
-$gr-grid-spaced:  "grid--spaced" !default;           // Increase gutter size
+$gr-grid-spaced: "grid--spaced" !default;           // Increase gutter size
 $gr-grid-compact: "grid--compact" !default;          // Remove all gutters
 $gr-grid-reversed: "grid--reversed" !default;        // Reverse direction of the grid. i.e. direction: rtl;
 $gr-grid-centered: "grid--centered" !default;        // Centers the entire Grid, which grid items will inherit.

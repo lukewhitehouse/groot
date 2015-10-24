@@ -26,56 +26,65 @@
  * Namespacing
  */
 
-// 1. Main grid container which holds all elements
+// CORE
+
+// Main grid container which holds all elements
 $gr-grid: "grid" !default;
 
-// 2. Individual grid item/cell/unit/whatever you want to call it.
+// Individual grid item/cell/unit/whatever you want to call it.
 $gr-item: "grid__item" !default;
 
-// 3. The class chained onto the same element as above which controls the sizing.
+// The class chained onto the same element as above which controls the sizing.
 $gr-item-unit: "grid__item" !default;
+
+// MODIFIERS
+
+// Increase gutter size
+$gr-grid-spaced:  "grid--spaced" !default;
+
+// Remove all gutters
+$gr-grid-compact: "grid--compact" !default;
+
+// Reverse direction of the grid. i.e. direction: rtl;
+$gr-grid-reversed: "grid--reversed" !default;
+
+// Centers the entire Grid, which grid items will inherit.
+$gr-grid-centered: "grid--centered" !default;
+
+// Center an individual item, rather than all items.
+$gr-item-centered: "grid__item--centered" !default;
+
 
 /**
  * Sizing
  */
 
-// 1. The size between each grid item. Can use any CSS unit of measurement.
+// The size between each grid item. Can use any CSS unit of measurement.
 $gr-gutter: 1em !default;
 
-/**
- * Modifiers
- */
-
-// 1. Class which controls the reversed direction of the grid. i.e. direction: rtl;
-$gr-grid-reversed: "grid--reversed" !default;
-
-// 2. Centers the entire Grid, which grid items will inherit.
-$gr-grid-centered: "grid--centered" !default;
-
-// 3. Center an individual item, rather than all items.
-$gr-item-centered: "grid__item--centered" !default;
 
 /**
  * Grid alignment
  */
 
-// 1. Initial direction of the $gr-grid
+// Initial direction of the $gr-grid
 $gr-grid-direction: inherit !default;
 
-// 2. Initial horizontal alignment of the $gr-grid.
+// Initial horizontal alignment of the $gr-grid.
 $gr-grid-align-x: inherit !default;
+
 
 /**
  * Item alignment
  */
 
-// 1. Initial direction of the $gr-item
+// Initial direction of the $gr-item
 $gr-item-direction: inherit !default;
 
-// 2. Initial horizontal alignment of the $gr-item
+// Initial horizontal alignment of the $gr-item
 $gr-item-align-x: inherit !default;
 
-// 3. Initial vertical alignment of the $gr-item
+// Initial vertical alignment of the $gr-item
 $gr-item-align-y: top !default;
 
 
@@ -83,6 +92,7 @@ $gr-item-align-y: top !default;
 /* $. Base
 \*----------------------------------------------------------------*/
 
+// Main grid container which holds all elements
 .#{$gr-grid} {
     box-sizing: border-box;
     display: block;
@@ -92,6 +102,7 @@ $gr-item-align-y: top !default;
     text-align: $gr-grid-align-x;
 }
 
+// Individual grid item/cell/unit/whatever you want to call it.
 .#{$gr-item} {
     box-sizing: border-box;
     display: inline-block;
@@ -108,8 +119,27 @@ $gr-item-align-y: top !default;
 /* $. Modifiers
 \*----------------------------------------------------------------*/
 
+// Increase gutter size
+.#{$gr-grid-spaced} {
+    margin: 0 0 0 -#{($gr-gutter*2)};
+
+    > .#{$gr-item} {
+        padding: 0 0 0 ($gr-gutter*2);
+    }
+}
+
+// Remove all gutters
+.#{$gr-grid-compact} {
+    margin: 0;
+
+    > .#{$gr-item} {
+        padding: 0;
+    }
+}
+
+// Reverse direction of the grid. i.e. direction: rtl;
 .#{$gr-grid-reversed} {
-    @if($gr-grid-direction == 'rtl') {
+    @if($gr-grid-direction == "rtl") {
         direction: ltr;
     }
     @else {
@@ -123,7 +153,7 @@ $gr-item-align-y: top !default;
     }
 
     .#{$gr-item} {
-        @if($gr-grid-direction == 'rtl') {
+        @if($gr-grid-direction == "rtl") {
             margin: 0 -.25em 0 0;
         }
         @else {
@@ -132,10 +162,12 @@ $gr-item-align-y: top !default;
     }
 }
 
+// Centers the entire Grid, which grid items will inherit.
 .#{$gr-grid-centered} {
     text-align: center;
 }
 
+// Center an individual item, rather than all items.
 .#{$gr-item-centered} {
     display: block;
     margin: 0 auto;
@@ -156,7 +188,7 @@ $gr-item-align-y: top !default;
  *
  * @return class declartion
  */
-@mixin groot($cols, $suffix: '')
+@mixin groot($cols, $suffix: "")
 {
     /**
      * Loop through $cols
@@ -177,7 +209,7 @@ $gr-item-align-y: top !default;
              * If a breakpoint has been declared, declare the class
              * for that breakpoint.
              */
-            @if($suffix != '' and $suffixL >= 1 ) {
+            @if($suffix != "" and $suffixL >= 1 ) {
 
                 /**
                  * Declare a class based on $col number AND breakpoint

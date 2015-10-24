@@ -56,45 +56,62 @@ Each of the following variables should be declared **above** the import of Groot
 
 **Available options and defaults:**
 
+Avaiable confirgurations can be seen by visiting the [`_variables.scss`](https://github.com/lukewhitehouse/groot/blob/master/assets/app/scss/_variables.scss) file. Here's a list for your convenience:
+
 ```scss
-/**
- * Namespacing
- */
-$gr-grid: "grid" !default;                          // Main grid container which holds all elements
-$gr-item: "grid__item" !default;                    // Individual grid item/cell/unit/whatever you want to call it.
-$gr-item-unit: "grid__item" !default;               // The class chained onto the same element as above which controls the sizing.
+// Core
+$gr-grid: "grid" !default;                           // Main grid container which holds all elements
+$gr-item: "grid__item" !default;                     // Individual grid item/cell/unit/whatever you want to call it.
+$gr-item-unit: "grid__item" !default;                // The class chained onto the same element as above which controls the sizing.
 
-/**
- * Sizing
- */
-$gr-gutter: 1em !default;                           // The size between each grid item. Can use any CSS unit of measurement.
+// Modifiers
+$gr-grid-spaced:  "grid--spaced" !default;           // Increase gutter size
+$gr-grid-compact: "grid--compact" !default;          // Remove all gutters
+$gr-grid-reversed: "grid--reversed" !default;        // Reverse direction of the grid. i.e. direction: rtl;
+$gr-grid-centered: "grid--centered" !default;        // Centers the entire Grid, which grid items will inherit.
+$gr-item-centered: "grid__item--centered" !default;  // Center an individual item, rather than all items.
 
-/**
- * Modifiers
- */
-$gr-grid-reversed: "grid--reversed" !default;       // Class which controls the reversed direction of the grid. i.e. direction: rtl;
-$gr-grid-centered: "grid--centered" !default;       // Centers the entire Grid, which grid items will inherit.
-$gr-item-centered: "grid__item--centered" !default; // Center an individual item, rather than all items.
+// Sizing
+$gr-gutter: 1em !default;                            // The size between each grid item. Can use any CSS unit of measurement.
 
-/**
- * Grid alignment
- */
-$gr-grid-direction: inherit !default;               // Initial direction of the $gr-grid
+// Grid Alignment
+$gr-grid-direction: inherit !default;                // Initial direction of the $gr-grid
+$gr-grid-align-x: inherit !default;                  // Initial horizontal alignment of the $gr-grid.
 
-$gr-grid-align-x: inherit !default;                 // Initial horizontal alignment of the $gr-grid.
-
-/**
- * Item alignment
- */
-$gr-item-direction: inherit !default;               // Initial direction of the $gr-item
-$gr-item-align-x: inherit !default;                 // Initial horizontal alignment of the $gr-item
-$gr-item-align-y: top !default;                     // Initial vertical alignment of the $gr-item
+// Item Alignment
+$gr-item-direction: inherit !default;                // Initial direction of the $gr-item
+$gr-item-align-x: inherit !default;                  // Initial horizontal alignment of the $gr-item
+$gr-item-align-y: top !default;                      // Initial vertical alignment of the $gr-item
 ```
 
 ## Modifiers
 
+Here's a list of the modifier's are their default class names. You can see examples of all these by going to the [examples](https://github.com/lukewhitehouse/groot#examples) section of the README.
+
+##### `.grid--spaced`
+Add this to the containing grid and the gutters width will be doubled.
+
+##### `.grid--compact`
+Add this to the containing gird and the gutters will be removed.
+
+##### `.grid--reversed`
+Add this to the container grid to reverse direction of it.
+
+##### `.grid--centered`
+Add this to the containing grid centers it and anything within (through CSS inheritance).
+
+##### `.grid__item--centered`
+Adding this to a grid item centers only it, rather than all items.
+
 
 ## Examples
+
+An [accompanying website](http://github.com/lukewhitehouse/groot-website) has been created to demonstrate Groot's capabilities and how to correctly use it.
+
+- [Basic Usage](): How to create a basic grid without any modifications of any kind and using the system defaults.
+- [Altered Defaults](): Same as the basic usage, but with changes to the default variables.
+- [Nesting](): Gridception yo. Example grid with other grid's inside of it.
+- [Modifiers](): An example of each of the default modifiers, as [described above](https://github.com/lukewhitehouse/groot#modifiers).
 
 
 ## Credits

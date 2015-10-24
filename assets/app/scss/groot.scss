@@ -1,232 +1,42 @@
 /**
  ***************************************************************************
- * Groot > _groot.scss
+ * Groot > assets/app/scss/groot.scss
  ***************************************************************************
  *
- * The core functionality for Groot, including any project defaults,
- * modifiers and the classes themselves.
+ * Acting as a hub to build upon the components which make up the
+ * Groot system.
  *
  * $. Variables
  * $. Base
  * $. Modifiers
- * $. Build
+ * $. Builder
  *
  */
 
 
 
 /* $. Variables
- *
- * - All variables namespaced with $gr to prevent conflicts
- * - !default used to allow override capabilities
- *
 \*----------------------------------------------------------------*/
 
-/**
- * Namespacing
- */
-
-// CORE
-
-// Main grid container which holds all elements
-$gr-grid: "grid" !default;
-
-// Individual grid item/cell/unit/whatever you want to call it.
-$gr-item: "grid__item" !default;
-
-// The class chained onto the same element as above which controls the sizing.
-$gr-item-unit: "grid__item" !default;
-
-// MODIFIERS
-
-// Increase gutter size
-$gr-grid-spaced:  "grid--spaced" !default;
-
-// Remove all gutters
-$gr-grid-compact: "grid--compact" !default;
-
-// Reverse direction of the grid. i.e. direction: rtl;
-$gr-grid-reversed: "grid--reversed" !default;
-
-// Centers the entire Grid, which grid items will inherit.
-$gr-grid-centered: "grid--centered" !default;
-
-// Center an individual item, rather than all items.
-$gr-item-centered: "grid__item--centered" !default;
-
-
-/**
- * Sizing
- */
-
-// The size between each grid item. Can use any CSS unit of measurement.
-$gr-gutter: 1em !default;
-
-
-/**
- * Grid alignment
- */
-
-// Initial direction of the $gr-grid
-$gr-grid-direction: inherit !default;
-
-// Initial horizontal alignment of the $gr-grid.
-$gr-grid-align-x: inherit !default;
-
-
-/**
- * Item alignment
- */
-
-// Initial direction of the $gr-item
-$gr-item-direction: inherit !default;
-
-// Initial horizontal alignment of the $gr-item
-$gr-item-align-x: inherit !default;
-
-// Initial vertical alignment of the $gr-item
-$gr-item-align-y: top !default;
+@import "variables";
 
 
 
 /* $. Base
 \*----------------------------------------------------------------*/
 
-// Main grid container which holds all elements
-.#{$gr-grid} {
-    box-sizing: border-box;
-    display: block;
-    padding: 0;
-    margin: 0 0 0 -#{$gr-gutter};
-    direction: $gr-grid-direction;
-    text-align: $gr-grid-align-x;
-}
-
-// Individual grid item/cell/unit/whatever you want to call it.
-.#{$gr-item} {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
-    margin: 0 -.25em 0 0;
-    padding: 0 0 0 $gr-gutter;
-    direction: $gr-item-direction;
-    text-align: $gr-item-align-x;
-    vertical-align: $gr-item-align-y;
-}
+@import "base";
 
 
 
 /* $. Modifiers
 \*----------------------------------------------------------------*/
 
-// Increase gutter size
-.#{$gr-grid-spaced} {
-    margin: 0 0 0 -#{($gr-gutter*2)};
-
-    > .#{$gr-item} {
-        padding: 0 0 0 ($gr-gutter*2);
-    }
-}
-
-// Remove all gutters
-.#{$gr-grid-compact} {
-    margin: 0;
-
-    > .#{$gr-item} {
-        padding: 0;
-    }
-}
-
-// Reverse direction of the grid. i.e. direction: rtl;
-.#{$gr-grid-reversed} {
-    @if($gr-grid-direction == "rtl") {
-        direction: ltr;
-    }
-    @else {
-        direction: rtl;
-    }
-
-    &:after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-    .#{$gr-item} {
-        @if($gr-grid-direction == "rtl") {
-            margin: 0 -.25em 0 0;
-        }
-        @else {
-            margin: 0 0 0 -.25em;
-        }
-    }
-}
-
-// Centers the entire Grid, which grid items will inherit.
-.#{$gr-grid-centered} {
-    text-align: center;
-}
-
-// Center an individual item, rather than all items.
-.#{$gr-item-centered} {
-    display: block;
-    margin: 0 auto;
-}
+@import "modifiers";
 
 
 
 /* $. Build
 \*----------------------------------------------------------------*/
 
-/**
- * This Mixin is used to build out the Grid system. This takes two
- * parameters, one for the number of columns to create and the second
- * for at what breakpoint this should be created for.
- *
- * @param | int    | $cols   | Number of Columns to build
- * @param | string | $suffix | Suffix for the Class declaration
- *
- * @return class declartion
- */
-@mixin groot($cols, $suffix: "")
-{
-    /**
-     * Loop through $cols
-     */
-    @each $col in $cols {
-
-        /**
-         * Create a loop ending with 1 less than the $col parameter
-         */
-        @for $i from 1 through $col {
-
-            /**
-             * Get the length of the $suffix parameter
-             */
-            $suffixL: str-length($suffix);
-
-            /**
-             * If a breakpoint has been declared, declare the class
-             * for that breakpoint.
-             */
-            @if($suffix != "" and $suffixL >= 1 ) {
-
-                /**
-                 * Declare a class based on $col number AND breakpoint
-                 */
-                .#{$gr-item-unit}--#{$i}-#{$col}-#{$suffix} {
-                    width: percentage($i / $col);
-                }
-            } @else {
-
-                /**
-                 * Declare a class based on $col number
-                 */
-                .#{$gr-item-unit}--#{$i}-#{$col} {
-                    width: percentage($i / $col);
-                }
-            }
-
-        }
-    }
-}
+@import "builder";

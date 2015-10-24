@@ -1,0 +1,82 @@
+/**
+ ***************************************************************************
+ * Groot > assets/app/scss/_modifiers.scss
+ ***************************************************************************
+ *
+ * Styling to produce the various modifiers that come prebuilt into the
+ * grid system.
+ *
+ * $. Spacing
+ * $. Directional
+ * $. Alignment
+ *
+ */
+
+
+
+/* $. Spacing
+\*----------------------------------------------------------------*/
+
+// Increase gutter size
+.#{$gr-grid-spaced} {
+    margin: 0 0 0 -#{($gr-gutter*2)};
+
+    > .#{$gr-item} {
+        padding: 0 0 0 ($gr-gutter*2);
+    }
+}
+
+// Remove all gutters
+.#{$gr-grid-compact} {
+    margin: 0;
+
+    > .#{$gr-item} {
+        padding: 0;
+    }
+}
+
+
+
+/* $. Directional
+\*----------------------------------------------------------------*/
+
+// Reverse direction of the grid. i.e. direction: rtl;
+.#{$gr-grid-reversed} {
+    @if($gr-grid-direction == "rtl") {
+        direction: ltr;
+    }
+    @else {
+        direction: rtl;
+    }
+
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .#{$gr-item} {
+        @if($gr-grid-direction == "rtl") {
+            margin: 0 -.25em 0 0;
+        }
+        @else {
+            margin: 0 0 0 -.25em;
+        }
+    }
+}
+
+
+
+/* $. Alignment
+\*----------------------------------------------------------------*/
+
+// Centers the entire Grid, which grid items will inherit.
+.#{$gr-grid-centered} {
+    text-align: center;
+}
+
+// Center an individual item, rather than all items.
+.#{$gr-item-centered} {
+    display: block;
+    margin: 0 auto;
+}

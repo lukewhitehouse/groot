@@ -1,0 +1,60 @@
+/**
+ ***************************************************************************
+ * Groot > assets/app/scss/_builder.scss
+ ***************************************************************************
+ *
+ * This Mixin is used to build out the Grid system. This takes two
+ * parameters, one for the number of columns to create and the second
+ * for at what breakpoint this should be created for.
+ *
+ * @param | int    | $cols   | Number of Columns to build
+ * @param | string | $suffix | Suffix for the Class declaration
+ *
+ * @return class declartion
+ *
+ */
+
+
+
+@mixin groot($cols, $suffix: "") {
+
+    /**
+     * Loop through $cols
+     */
+    @each $col in $cols {
+
+        /**
+         * Create a loop ending with 1 less than the $col parameter
+         */
+        @for $i from 1 through $col {
+
+            /**
+             * Get the length of the $suffix parameter
+             */
+            $suffixL: str-length($suffix);
+
+            /**
+             * If a breakpoint has been declared, declare the class
+             * for that breakpoint.
+             */
+            @if($suffix != "" and $suffixL >= 1 ) {
+
+                /**
+                 * Declare a class based on $col number AND breakpoint
+                 */
+                .#{$gr-item-unit}--#{$i}-#{$col}-#{$suffix} {
+                    width: percentage($i / $col);
+                }
+            } @else {
+
+                /**
+                 * Declare a class based on $col number
+                 */
+                .#{$gr-item-unit}--#{$i}-#{$col} {
+                    width: percentage($i / $col);
+                }
+            }
+
+        }
+    }
+}

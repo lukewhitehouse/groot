@@ -1,0 +1,84 @@
+/**
+ ***************************************************************************
+ * Groot > assets/app/scss/_variables.scss
+ ***************************************************************************
+ *
+ * All available variables have present !default values which can be
+ * overridden by the user. In addition, to prevent conflicts with 3rd
+ * party packages, each variable is namespaced with `$gr`, short for
+ * groot.
+ *
+ * $. Core
+ * $. Modifiers
+ * $. Sizing
+ * $. Grid Alignment
+ * $. Item Alignment
+ *
+ */
+
+
+
+/* $. Core
+\*----------------------------------------------------------------*/
+
+// Main grid container which holds all elements
+$gr-grid: "grid" !default;
+
+// Individual grid item/cell/unit/whatever you want to call it.
+$gr-item: "grid__item" !default;
+
+// The class chained onto the same element as above which controls the sizing.
+$gr-item-unit: "grid__item" !default;
+
+
+
+/* $. Modifiers
+\*----------------------------------------------------------------*/
+
+// Increase gutter size
+$gr-grid-spaced:  "grid--spaced" !default;
+
+// Remove all gutters
+$gr-grid-compact: "grid--compact" !default;
+
+// Reverse direction of the grid. i.e. direction: rtl;
+$gr-grid-reversed: "grid--reversed" !default;
+
+// Centers the entire Grid, which grid items will inherit.
+$gr-grid-centered: "grid--centered" !default;
+
+// Center an individual item, rather than all items.
+$gr-item-centered: "grid__item--centered" !default;
+
+
+
+/* $. Sizing
+\*----------------------------------------------------------------*/
+
+// The size between each grid item. Can use any CSS unit of measurement.
+$gr-gutter: 1em !default;
+
+
+
+/* $. Grid Alignment
+\*----------------------------------------------------------------*/
+
+// Initial direction of the $gr-grid
+$gr-grid-direction: inherit !default;
+
+// Initial horizontal alignment of the $gr-grid.
+$gr-grid-align-x: inherit !default;
+
+
+
+/* $. Item Alignment
+\*----------------------------------------------------------------*/
+
+// Initial direction of the $gr-item
+$gr-item-direction: inherit !default;
+
+// Initial horizontal alignment of the $gr-item
+$gr-item-align-x: inherit !default;
+
+// Initial vertical alignment of the $gr-item
+$gr-item-align-y: top !default;

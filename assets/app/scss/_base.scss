@@ -1,0 +1,43 @@
+/**
+ ***************************************************************************
+ * Groot > assets/app/scss/_base.scss
+ ***************************************************************************
+ *
+ * Create the main classes for the grid's container and its children.
+ *
+ * $. Container
+ * $. Item
+ *
+ */
+
+
+
+/* $. Container
+\*----------------------------------------------------------------*/
+
+// Main grid container which holds all elements
+.#{$gr-grid} {
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    margin: 0 0 0 -#{$gr-gutter};
+    direction: $gr-grid-direction;
+    text-align: $gr-grid-align-x;
+}
+
+
+
+/* $. Item
+\*----------------------------------------------------------------*/
+
+// Individual grid item/cell/unit/whatever you want to call it.
+.#{$gr-item} {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    margin: 0 -.25em 0 0;
+    padding: 0 0 0 $gr-gutter;
+    direction: $gr-item-direction;
+    text-align: $gr-item-align-x;
+    vertical-align: $gr-item-align-y;
+}

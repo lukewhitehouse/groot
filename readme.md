@@ -15,8 +15,8 @@ Groot prides itself on the following:
 Groot is available through a number of package managers, including:
 
 ```sh
-npm install --save-dev groot
-bower install --save groot
+npm install --save-dev groot-sass
+bower install --save groot-sass
 ```
 
 Alternatively, you could always download/clone this repo and use it in your own way.

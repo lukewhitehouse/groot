@@ -112,7 +112,7 @@ An [accompanying website](http://github.com/lukewhitehouse/groot-website) has be
 - [Modifiers](): An example of each of the default modifiers, as [described above](https://github.com/lukewhitehouse/groot#modifiers).
 
 ## Compatability
-Groot has been tried and tested within the latest browsers, but also works great for those older versions of IE that you may still need to support (I feel your struggle). Here's a full list of the browser/device combinations that Groot has been verified in. If you feel theres a problem with any of these, please [open an issue](https://github.com/lukewhitehouse/groot/issues) and we'll try to resolve it together. (Any + icon refers to latest version of that browser)
+Groot has been tried and tested within the latest browsers, but also works great for those older versions of IE that you may still need to support (I feel your struggle). Here's a full list of the browser/device combinations that Groot has been verified in. If you feel theres a problem with any of these, please [open an issue](https://github.com/lukewhitehouse/groot/issues) and we'll try to resolve it together.
 
 Mac/Windows:
 - Chrome

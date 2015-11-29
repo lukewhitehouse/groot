@@ -1,7 +1,7 @@
 # Groot
 The root of all projects.
 
-Groot is a class-based CSS Grid system derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). I've been using Griddle for many years professionally now and whilst I love the overall package, its not perfect and could do with a upgrade. I've started Groot with the intention of being that.
+Groot is a class-based CSS Grid system derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). I've been using Griddle for many years professionally and whilst I love the overall package, its not perfect and could do with a upgrade. I've started Groot with the intention of being that.
 
 Groot prides itself on the following:
 
@@ -23,9 +23,7 @@ Alternatively, you could always download/clone this repo and use it in your own 
 
 ## Usage
 
-If you've used [Griddle](https://github.com/necolas/griddle) before, you'll see that the syntax is very similar. If you've not used it before, don't fear. Groot is pretty easy to get to grips with.
-
-Once you've imported to the Groot system, use the `groot` mixin provided to build out the grids you need.
+Groot is pretty easy to get to grips with. Once you've imported to the Groot system, use the `groot` mixin provided to build out the grids you need.
 
 ```scss
 @import "groot";
@@ -113,10 +111,28 @@ An [accompanying website](http://github.com/lukewhitehouse/groot-website) has be
 - [Nesting](): Gridception yo. Example grid with other grid's inside of it.
 - [Modifiers](): An example of each of the default modifiers, as [described above](https://github.com/lukewhitehouse/groot#modifiers).
 
+## Compatability
+Groot has been tried and tested within the latest browsers, but also works great for those older versions of IE that you may still need to support (I feel your struggle). Here's a full list of the browser/device combinations that Groot has been verified in. If you feel theres a problem with any of these, please [open an issue](https://github.com/lukewhitehouse/groot/issues) and we'll try to resolve it together. (Any + icon refers to latest version of that browser)
+
+Mac/Windows:
+- Chrome
+- Firefox
+- Safari
+- Opera
+- Edge
+- IE8+ *
+
+Mobile:
+- iOS7+
+- Android 4.3+
+- Windows Phone
+
+> * Whilst Groot does support IE8, there are caveats. IE8 doesn't support media queries and therefore you'll need to make sure you use something like [respond.js](https://github.com/scottjehl/Respond#respondjs). However, I'd recommend if you need IE8 support that you give [Jake Archibold's Media Query Mixin](http://jakearchibald.github.io/sass-ie/) a read. Its great! Here's an example of [Groot working in IE8](http://github.com/lukewhitehouse/groot-website/examples/ie8.html) without any media queries.
 
 ## Credits
 
 Groot has been produced primarily by Luke Whitehouse, however, special thanks have to be given to the following:
+- [Griddle](https://github.com/necolas/griddle): The inspriation for Groot.
 - [Mixd](http://mixd.co.uk): Who introduced me to Griddle in the first place. If – like us – you work with WordPress then you may be interested in our Open Source project called [wp-deploy](https://github.com/Mixd/wp-deploy); a capistrano-powered deployment tool for WordPress.
 
 ## License

@@ -64,7 +64,7 @@ $gr-item: "grid__item" !default;                     // Individual grid item/cel
 $gr-item-unit: "grid__item" !default;                // The class chained onto the same element as above which controls the sizing.
 
 // Modifiers
-$gr-grid-spaced: "grid--spaced" !default;           // Increase gutter size
+$gr-grid-spaced: "grid--spaced" !default;            // Increase gutter size
 $gr-grid-compact: "grid--compact" !default;          // Remove all gutters
 $gr-grid-reversed: "grid--reversed" !default;        // Reverse direction of the grid. i.e. direction: rtl;
 $gr-grid-centered: "grid--centered" !default;        // Centers the entire Grid, which grid items will inherit.
@@ -139,7 +139,7 @@ Here's a quick roadmap on where I'd like to take Groot in the coming months.
 
 ## Credits
 
-Groot has been produced primarily by Luke Whitehouse, however, special thanks have to be given to the following:
+With any project, theres always special thanks and recognition to be given:
 - [Griddle](https://github.com/necolas/griddle): The inspriation for Groot.
 - [Mixd](http://mixd.co.uk): Who introduced me to Griddle in the first place. If – like us – you work with WordPress then you may be interested in our Open Source project called [wp-deploy](https://github.com/Mixd/wp-deploy); a capistrano-powered deployment tool for WordPress.
 

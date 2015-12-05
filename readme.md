@@ -1,14 +1,15 @@
 # Groot
 The root of all projects.
 
-Groot is a class-based CSS Grid system derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). I've been using Griddle for many years professionally and whilst I love the overall package, its not perfect and could do with a upgrade. I've started Groot with the intention of being that.
+Groot is a class-based declarative CSS Grid system, originally derived from the amazing work Nicolas Gallagher produced with [Griddle](https://github.com/necolas/griddle). I've been using Griddle for many years professionally and whilst I love the overall package, its not perfect and could do with a upgrade. I've started Groot with the intention of being that.
 
 Groot prides itself on the following:
 
-- Flexibility: Complete control to fit it into your own workflow or framework.
-- Modular: Defaults to a BEM structured Grid System and keeps the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) in mind at all times.
-- Configurable: Ability to change any class names, gutter sizes or alignment declarations to your hearts desire.
-- Lightweight: With its opt-in columns, you're looking at around 5kb minified and gzipped
+- **Flexibility**: Complete control to fit it into your own workflow or framework.
+- **Modular**: Defaults to a BEM structured Grid System and keeps the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) in mind at all times.
+- **Configurable**: Ability to change any class names, gutter sizes or alignment declarations to your hearts desire. Prefer SMACSS or <insert-methodogoly-here>? Don't sweat it.
+- **Lightweight**: With its opt-in columns, don't worry about bloated code, Groot will only create the code you need for your project. You're looking at around 4KB minified and gzipped
+- **Declarative**: Opt-in, breakpoint specific classes for column sizings mean you're in control. Gone are the days of all sections/page conforming to the same Mobile/Tablet/Desktop sizes.
 
 ## Installation
 
@@ -35,8 +36,8 @@ It takes two parameters:
 - `$columns`: A space-separated list of integers, each of which results in the build of that particular grid.
 - `$suffix`: The suffix for the class. This is optional and is intended when you're setting up a Groot instance within a Media Query.
 
-
 ## Configuration
+
 While Groot may have defaults for the configuration, you still have a lot of freedom in how you'd like to setup your version.
 
 Each of the following variables should be declared **above** the import of Groot.

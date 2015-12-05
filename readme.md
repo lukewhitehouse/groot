@@ -107,10 +107,11 @@ Adding this to a grid item centers only it, rather than all items.
 
 An [accompanying website](http://github.com/lukewhitehouse/groot-website) has been created to demonstrate Groot's capabilities and how to correctly use it.
 
-- [Basic Usage](): How to create a basic grid without any modifications of any kind and using the system defaults.
-- [Altered Defaults](): Same as the basic usage, but with changes to the default variables.
-- [Nesting](): Gridception yo. Example grid with other grid's inside of it.
-- [Modifiers](): An example of each of the default modifiers, as [described above](https://github.com/lukewhitehouse/groot#modifiers).
+- [Basic Usage](http://github.com/lukewhitehouse/groot-website/blob/master/examples/basic.html): How to create a basic grid without any modifications of any kind and using the system defaults.
+- [Nesting](http://github.com/lukewhitehouse/groot-website/blob/master/examples/nested.html): Gridception yo. Example grid with other grid's inside of it.
+- [Modifiers](http://github.com/lukewhitehouse/groot-website/blob/master/examples/modifiers.html): An example of each of the default modifiers, as [described above](https://github.com/lukewhitehouse/groot#modifiers).
+- [Reversed](http://github.com/lukewhitehouse/groot-website/blob/master/examples/reversed.html): An example of each of the default modifiers, as [described above](https://github.com/lukewhitehouse/groot#modifiers).
+- [IE8](http://github.com/lukewhitehouse/groot-website/blob/master/examples/ie8.html): An example of Groot without media query classes (for IE8 and below - read below for more information)
 
 ## Compatability
 Groot has been tried and tested within the latest browsers, but also works great for those older versions of IE that you may still need to support (I feel your struggle). Here's a full list of the browser/device combinations that Groot has been verified in. If you feel theres a problem with any of these, please [open an issue](https://github.com/lukewhitehouse/groot/issues) and we'll try to resolve it together.

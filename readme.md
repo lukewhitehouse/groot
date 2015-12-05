@@ -128,7 +128,7 @@ Mobile:
 - Android 4.3+
 - Windows Phone
 
-> !! Whilst Groot does support IE8, there are caveats. IE8 doesn't support media queries and therefore you'll need to make sure you use something like [respond.js](https://github.com/scottjehl/Respond#respondjs). However, I'd recommend if you need IE8 support that you give [Jake Archibold's Media Query Mixin](http://jakearchibald.github.io/sass-ie/) a read. Its great! Here's an example of [Groot working in IE8](http://github.com/lukewhitehouse/groot-website/examples/ie8.html) without any media queries.
+> !! Whilst Groot does support IE8, there are caveats. IE8 doesn't support media queries and therefore you'll need to make sure you use something like [respond.js](https://github.com/scottjehl/Respond#respondjs). However, I'd recommend if you need IE8 support that you give [Jake Archibold's Media Query Mixin](http://jakearchibald.github.io/sass-ie/) a read. Its great! Here's an example of [Groot working in IE8](http://github.com/lukewhitehouse/groot-website/blob/master/examples/ie8.html) without any media queries.
 
 ## Roadmap
 Here's a quick roadmap on where I'd like to take Groot in the coming months.

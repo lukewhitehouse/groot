@@ -19,7 +19,7 @@
 
 // Increase gutter size
 .#{$gr-grid-spaced} {
-    margin: 0 0 0 -#{($gr-gutter*2)};
+    margin: 0 0 0 #{- ($gr-gutter*2)};
 
     > .#{$gr-item} {
         padding: 0 0 0 ($gr-gutter*2);

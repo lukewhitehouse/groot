@@ -20,7 +20,7 @@
     box-sizing: border-box;
     display: block;
     padding: 0;
-    margin: 0 0 0 -#{$gr-gutter};
+    margin: 0 0 0 #{- $gr-gutter};
     direction: $gr-grid-direction;
     text-align: $gr-grid-align-x;
 }

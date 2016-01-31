@@ -13,7 +13,7 @@
     "test",
     "tests"
   ],
-  "main": "assets/app/scss/_groot.scss",
+  "main": "groot.scss",
   "authors": [
     "Luke Whitehouse"
   ],

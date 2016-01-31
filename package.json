@@ -16,18 +16,5 @@
   "bugs": {
     "url": "https://github.com/lukewhitehouse/groot/issues"
   },
-  "devDependencies": {
-    "autoprefixer-core": "^5.2.0",
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-livereload": "~3.8.0",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-notify": "~2.2.0",
-    "gulp-pixrem": "~0.2.3",
-    "gulp-plumber": "~1.0.0",
-    "gulp-postcss": "^5.1.8",
-    "gulp-sass": "~2.0.1",
-    "gulp-sourcemaps": "~1.5.0"
-  },
   "license": "MIT"
 }

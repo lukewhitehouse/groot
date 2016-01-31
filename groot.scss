@@ -1,6 +1,6 @@
 /**
  ***************************************************************************
- * Groot > assets/app/scss/groot.scss
+ * Groot > groot.scss
  ***************************************************************************
  *
  * Acting as a hub to build upon the components which make up the
@@ -18,25 +18,25 @@
 /* $. Variables
 \*----------------------------------------------------------------*/
 
-@import "variables";
+@import "src/variables";
 
 
 
 /* $. Base
 \*----------------------------------------------------------------*/
 
-@import "base";
+@import "src/base";
 
 
 
 /* $. Modifiers
 \*----------------------------------------------------------------*/
 
-@import "modifiers";
+@import "src/modifiers";
 
 
 
 /* $. Build
 \*----------------------------------------------------------------*/
 
-@import "builder";
+@import "src/builder";

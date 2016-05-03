@@ -33,6 +33,48 @@ The mixin takes two parameters:
 - `$columns`: A space-separated list of integers, each of which results in the build of that particular grid.
 - `$extension`: The suffix for the class. This is optional and is intended when you're setting up a Groot instance within a Media Query.
 
+So, lets say we're creating 2 and 3 column grids. Here's what that would look like:
+
+```scss
+@import "/path/to/groot";
+@include groot(2 3);
+```
+
+which will output the following classes to use in your HTML (assuming default configuration has been used, see next section for more info)...
+
+```
+.grid__item--1-2 {}
+.grid__item--2-2 {}
+.grid__item--1-3 {}
+.grid__item--2-3 {}
+.grid__item--3-3 {}
+```
+
+If we then wanted these classes (read: these column sizes) to only be useable at a certain breakpoints, we can start to utilise the `$extension` suffix within a Media Query. Like so:
+
+```scss
+$bp3: 50em;
+
+@import "/path/to/groot";
+
+@media screen and (min-width: $bp3) {
+    @include groot(2 3, 'bp3');
+}
+```
+
+which will output the following classes to use in your HTML (again assuming default configuration)...
+
+```scss
+@media screen and (min-width: 50em) {
+    .grid__item--1-2-bp3
+    .grid__item--2-2-bp3
+    .grid__item--1-3-bp3
+    .grid__item--2-3-bp3
+    .grid__item--3-3-bp3
+}
+```
+
+
 ## Configuration
 
 One of the main benefits of Groot is that you can tailor it to your needs. While Groot may have defaults for the configuration, you still have a lot of freedom to change these as you see fit.

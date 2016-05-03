@@ -42,7 +42,7 @@ So, lets say we're creating 2 and 3 column grids. Here's what that would look li
 
 which will output the following classes to use in your HTML (assuming default configuration has been used, see next section for more info)...
 
-```
+```css
 .grid__item--1-2 {}
 .grid__item--2-2 {}
 .grid__item--1-3 {}
@@ -64,7 +64,7 @@ $bp3: 50em;
 
 which will output the following classes to use in your HTML (again assuming default configuration)...
 
-```scss
+```css
 @media screen and (min-width: 50em) {
     .grid__item--1-2-bp3
     .grid__item--2-2-bp3
